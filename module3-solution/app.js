@@ -67,7 +67,7 @@
 				promise.then(function(response){	
 						list.found = response;
 						
-						if (list.found.lenght === 0){
+						if (list.found.length === 0){
 							list.isEmpty = true;
 						} else{
 							list.isEmpty = false;
