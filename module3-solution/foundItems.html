@@ -1,0 +1,24 @@
+<table class="table table-hover" ng-hide="list.isEmpty" >
+	<thead>
+		<tr>
+			<th>Short Name</th>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Remove Item</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="item in list.found">
+			<td>{{item.short_name}}</td>
+			<td>{{item.name}}</td>
+			<td>{{item.description}}</td>
+			<td><button ng-click="list.onRemove({index: $index});">Remove</button></td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<br>
+<br>
+<div class="alert alert-danger" >
+    Nothing found
+</div>

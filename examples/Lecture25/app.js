@@ -24,7 +24,7 @@ function MenuCategoriesController(MenuCategoriesService) {
     var promise = MenuCategoriesService.getMenuForCategory(shortName);
 
     promise.then(function (response) {
-      console.log(response.data);
+      console.log(response.data.menu_items);
     })
     .catch(function (error) {
       console.log(error);
@@ -43,7 +43,6 @@ function MenuCategoriesService($http, ApiBasePath) {
       method: "GET",
       url: (ApiBasePath + "/categories.json")
     });
-
     return response;
   };
 
