@@ -60,9 +60,7 @@
 		list.getItems = function(searchTerm) {
 
 			if(searchTerm !== "" && searchTerm !== undefined){
-				console.log(searchTerm);
 				list.searchedBefore = true;
-				list.found = [];
 				var promise = MenuSearchService.getMatchedMenuItems(searchTerm); 
 				promise.then(function(response){	
 						list.found = response;
